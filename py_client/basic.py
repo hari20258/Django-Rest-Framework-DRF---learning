@@ -7,12 +7,11 @@ endpoint = "http://127.0.0.1:8000/api/"
 # REST API is a form of API (a web API)
 
 # get_response = requests.get(endpoint) -> this gives us a response object
-get_response = requests.get(endpoint,json={"Product_id": 123}) #-> we can pass our own json data to the api.
+get_response = requests.post(endpoint,json={"title": "Hello World","content": "Hello World"}) #-> we can pass our own json data to the api.
 #params is used to pass query parameters (basicially params are the query parameters which we see in url after ?, ex: http://127.0.0.1:8000/api/?abc=123)
-#print(get_response.text)
 print(get_response.json()) # this gives us a actual python dictionary.
 
 
-# HTTPS request gives us the raw form which is the HTML
+# HTTP request gives us the raw form which is the HTML
 # While a REST API HTTP request gives us the data in JSON, which is usable.
 #JSON -> Javascipt Object Notation is almost a python dictionary.
