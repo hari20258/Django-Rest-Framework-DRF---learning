@@ -4,6 +4,7 @@ from product.models import Product
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from product.serializers import ProductSerializer
+
 #from django.http import JsonResponse, HttpResponse #Json Response takes a dictionary as an argument and returns a JSON response. But a HTTPSResponse expects a string as an argument.
 # The JsonResponse is a Django class, it simplifies the process of creating a JSON response, it also sets the content type to application/json. Because in client side while using HttpResponse it will not set the content type to application/json and be as string, so we need to manually convert the data types to JSON fro every field in the dictionary.
 # def api_home(request, *args, **kwargs):
